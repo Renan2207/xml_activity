@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>My Soap Products:</h2>
+
+    <button type="button" onclick="loadXMLDoc()">
+        Get My Soap Products
+    </button>
+    
+    <table id="demo" border="1" cellspacing="0" cellpadding="10" width="80%" align="center">
+    </table>
+    
+    <script>
+        function loadXMLDoc() {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    createTable(this);
+                }
+            };
+            xmlhttp.open("GET", "soap_products.xml", true);
+            xmlhttp.send();
+        }
+        
+        function createTable(xml) {
+            var i, xmlDoc, txt;
+            
+            // Actual XML File Object mode
+            xmlDoc = xml.responseXML; 
+
+            txt = `
+                <tr>
+                    <th>NAME</th>
+                    <th>TYPE</th>
+                    <th>SCENT</th>
+                    <th>SIZE</th>
+                    <th>PRICE</th>
+                    <th>INGREDIENTS</th>
+                </tr>
+            `;
+
+            var soap_products = xmlDoc.getElementsByTagName("soap_products");
+
+            for (i = 0; i < soap_products.length; i++) {
+                var name = xmlDoc.getElementsByTagName("name");
+                var type = xmlDoc.getElementsByTagName("type");
+                var scent =xmlDoc.getElementsByTagName("scent");
+                var size =xmlDoc.getElementsByTagName("size");
+                var price = xmlDoc.getElementsByTagName("price");
+                var ingredients = soap_products[i].getElementsByTagName("ingredient");
+
+                var ingredientsList = "<ul>";
+                for (var j = 0; j < ingredients.length; j++) {
+                    ingredientsList += "<li>" + ingredients[j].childNodes[0].nodeValue + "</li>";
+                }
+                ingredientsList += "</ul>";
+
+                txt += `
+                    <tr>
+                        <td>${name[i].childNodes[0].nodeValue}</td>
+                        <td>${type[i].childNodes[0].nodeValue}</td>
+                        <td>${scent[i].childNodes[0].nodeValue}</td>
+                        <td>${size[i].childNodes[0].nodeValue}</td>
+                        <td>${price[i].childNodes[0].nodeValue}</td>
+                        <td>${ingredientsList}</td>
+                    </tr>
+                `;
+            }
+
+            document.getElementById("demo").innerHTML = txt;
+        }
+    </script>
+</body>
+</html>

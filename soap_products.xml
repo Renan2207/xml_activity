@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soaps>
+    <soap_products>
+        <name>Irish Spring</name>
+        <type>Bar Soap</type>
+        <scent>Original</scent>
+        <size>8 oz</size>
+        <price>₱119</price>
+        <ingredients>
+            <ingredient>Sodium Tallowate</ingredient>
+            <ingredient>Sodium Cocoate</ingredient>
+            <ingredient>Fragrance</ingredient>
+            <ingredient>Triclocarban</ingredient>
+            <ingredient>Tetrasodium EDTA</ingredient>
+        </ingredients>
+    </soap_products>
+    <soap_products>
+        <name>Safe guard</name>
+        <type>Bar Soap</type>
+        <scent>Cool menthol</scent>
+        <size>8oz</size>
+        <price>₱105</price>
+        <ingredients>
+            <ingredient>sodium tallowate</ingredient>
+            <ingredient>sodium palmate</ingredient>
+            <ingredient>sodium palm kernelate</ingredient>
+            <ingredient>sodium chloride</ingredient>
+            <ingredient>coconut acid</ingredient>
+        </ingredients>
+    </soap_products>
+    <soap_products>
+        <name>Dove</name>
+        <type>Bar Soap</type>
+        <scent>Coconut milk</scent>
+        <size>6oz</size>
+        <price>₱130</price>
+        <ingredients>
+            <ingredient>Cocamidopropyl Betaine</ingredient>
+            <ingredient>Sodium Isethionate</ingredient>
+            <ingredient>Tetrasodium Etidronate</ingredient>
+            <ingredient>sodium chloride</ingredient>
+            <ingredient>water, fragrance</ingredient>
+        </ingredients>
+    </soap_products>
+    <soap_products>
+        <name>Olay</name>
+        <type>Bar Soap</type>
+        <scent>Original</scent>
+        <size>5oz</size>
+        <price>₱133</price>
+        <ingredients>
+            <ingredient>Sodium Cocoyl</ingredient>
+            <ingredient>Stearic Acid</ingredient>
+            <ingredient>Coconut Acid</ingredient>
+            <ingredient>Sodium Cocoate</ingredient>
+            <ingredient>Butyrospermum Parkii (Shea) Butter</ingredient>
+        </ingredients>
+    </soap_products>
+    <soap_products>
+       <name>Palmolive</name>
+			<type>Bar Soap</type>
+			<scent>lavender</scent>
+			<size>4 oz</size>
+			<price>₱27.10</price>
+		<ingredients>
+			<ingredient>Sodium Palmate</ingredient>
+			<ingredient>Sodium Cocoate</ingredient>
+			<ingredient>water</ingredient>
+			<ingredient>Nonfat Dry Milk</ingredient>
+			<ingredient>Aloe Barbadensis Leaf Extract</ingredient>
+        </ingredients>
+    </soap_products>
+</soaps>
